@@ -1,25 +1,19 @@
-'use client';
+"use client";
+import Globe from "@/components/globe";
+import Countdown from "@/components/countdown";
+import "../styles/globe.css";
 // import Image from 'next/image'
-import { Inter } from 'next/font/google';
-import { motion } from 'framer-motion';
+import { Inter } from "next/font/google";
 
-const inter = Inter({ subsets: ['latin'] });
+const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
   return (
-    <motion.h1
-      initial={{ y: '90vh', opacity: 0 }}
-      animate={{
-        y: '50vh',
-        opacity: 1,
-        transition: {
-          ease: 'easeInOut',
-          duration: '1',
-        },
-      }}
-      className={`text-[#0CF25D] ${inter.className} font-extrabold text-center text-[9rem] absolute`}
-    >
-      Hello world!
-    </motion.h1>
+    <div className="flex flex-col gap-3 justify-center items-center w-full h-full">
+      <Countdown />
+      <div className="globe-container">
+        <Globe />
+      </div>
+    </div>
   );
 }
