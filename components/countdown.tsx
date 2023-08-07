@@ -2,6 +2,10 @@
 import React, { useEffect, useState } from "react";
 import Reveal from "./reveal";
 
+import { targetDate } from "../utils/data.js";
+
+import { motion } from "framer-motion";
+
 function Countdown() {
   const [reveal, setReveal] = useState(false);
   const [days, setDays] = useState(7);
@@ -11,7 +15,7 @@ function Countdown() {
 
   useEffect(() => {
     const interval = setInterval(() => {
-      const target = new Date("7/10/2023 23:30:00");
+      const target = new Date();
       const now = new Date();
 
       let difference = target.getTime() - now.getTime();
@@ -42,12 +46,31 @@ function Countdown() {
   return reveal ? (
     <Reveal />
   ) : (
-    <p className="w-[full] h-[29px] text-center text-[#416CB1] text-sm font-black uppercase tracking-[0.2rem] drop-shadow-[0_0_8px_rgba(76,119,189,1)]">
+    <motion.p
+      initial={{
+        opacity: 0,
+      }}
+      animate={{
+        opacity: 1,
+      }}
+      exit={{
+        opacity: 0,
+      }}
+      transition={{
+        type: "spring",
+        damping: 3,
+        stiffness: 50,
+        restDelta: 0.001,
+        duration: 10,
+        delay: 6,
+      }}
+      className="w-[full] h-[29px] text-[#416CB1] text-sm font-black uppercase tracking-[0.2rem] drop-shadow-[0_0_8px_rgba(76,119,189,1)]"
+    >
       {days}d&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
       {hours}hr&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
       {minutes}m&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;{" "}
       {seconds}s
-    </p>
+    </motion.p>
   );
 }
 

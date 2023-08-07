@@ -9,11 +9,9 @@ const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
   return (
-    <div className="flex flex-col gap-3 justify-center items-center w-full h-full">
+    <div className="flex flex-col gap-[3rem] justify-center items-center w-full h-full">
       <Countdown />
-      <div className="globe-container">
-        <Globe />
-      </div>
+      <Globe />
     </div>
   );
 }
