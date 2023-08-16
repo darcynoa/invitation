@@ -1,5 +1,5 @@
 {
-  "name": "next13-tail-frame",
+  "name": "invitation",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -9,20 +9,19 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@types/node": "18.15.11",
-    "@types/react": "18.0.32",
-    "@types/react-dom": "18.0.11",
-    "eslint": "8.37.0",
-    "eslint-config-next": "13.2.4",
-    "framer-motion": "^10.10.0",
-    "next": "13.2.4",
+    "@types/node": "20.4.8",
+    "@types/react": "18.2.18",
+    "@types/react-dom": "18.2.7",
+    "autoprefixer": "10.4.14",
+    "classnames": "^2.3.2",
+    "eslint": "8.46.0",
+    "eslint-config-next": "13.4.13",
+    "framer-motion": "^10.15.1",
+    "next": "13.4.13",
+    "postcss": "8.4.27",
     "react": "18.2.0",
     "react-dom": "18.2.0",
-    "typescript": "5.0.3"
-  },
-  "devDependencies": {
-    "autoprefixer": "^10.4.14",
-    "postcss": "^8.4.21",
-    "tailwindcss": "^3.3.1"
+    "tailwindcss": "3.3.3",
+    "typescript": "5.1.6"
   }
 }

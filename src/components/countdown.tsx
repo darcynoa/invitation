@@ -2,7 +2,7 @@
 import React, { useEffect, useState } from "react";
 import Reveal from "./reveal";
 
-import { targetDate } from "../utils/data.js";
+import { targetDate } from "../../utils/data.js";
 
 import { motion } from "framer-motion";
 
@@ -36,7 +36,7 @@ function Countdown() {
       if (d <= 0 && h <= 0 && m <= 0 && s <= 0) {
         setReveal(true);
       }
-    }, 1000);
+    }, 100);
 
     return () => {
       clearInterval(interval);

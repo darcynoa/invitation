@@ -58,7 +58,8 @@ function Choice() {
           <Link
             key={key}
             className="text-[#DEE4EE] text-l font-black uppercase tracking-[3.60px] hover:text-[#7C9CCF] hover:drop-shadow-[0_0_12px_rgba(208,214,225,1)] hover:cursor-pointer transition-all"
-            href={`/${key}`}
+            href="/name/[slug["
+            as={`/${key}`}
           >
             {key}
           </Link>
